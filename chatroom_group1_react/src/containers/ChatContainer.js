@@ -34,8 +34,6 @@ const ChatContainer = () => {
     return ( 
 
         <>
-        
-        <h2>ChatRoom</h2>
         <ChatList listOfChatrooms={listOfChatrooms}/>
         <ChatForm postChatroom={postChatroom}/>
         

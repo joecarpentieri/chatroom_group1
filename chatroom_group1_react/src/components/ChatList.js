@@ -8,7 +8,7 @@ const ChatList = ({listOfChatrooms}) => {
     return ( 
 
             <>
-            <h3>List of Chats</h3>
+            <h1>List of Chats</h1>
             {displayChatrooms}
             </>
      );

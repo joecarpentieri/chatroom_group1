@@ -41,7 +41,6 @@ const ChatForm = ({postChatroom}) => {
             />
             <input type='submit' value="Add Chatroom!" />
         </form>
-        <h3>ChatForm</h3>
         </>
     );
 }
