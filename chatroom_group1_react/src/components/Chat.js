@@ -1,8 +1,8 @@
-const Chat = () => {
+const Chat = ({chatroom}) => {
     return ( 
 
         <>
-            <h4>Chat</h4>
+            <h4>{chatroom.name}</h4>
             
         </>
      );
