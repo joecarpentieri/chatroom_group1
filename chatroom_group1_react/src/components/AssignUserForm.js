@@ -26,6 +26,7 @@ const handleFormSubmit = (event) =>{
         chatroomId: null,
         userId: null
         })
+    event.target.reset();
 }
 
 
@@ -42,13 +43,13 @@ const handleChange = (event) => {
             <h2>Add user to ChatRoom</h2>
             <form id = "assignmentForm" onSubmit={handleFormSubmit}> 
                 <label htmlFor="chatroom">Select Chatroom:</label>
-                <select id = "chatroom" name='chatroomId' onChange={handleChange} defaultValue="select-chatroom">
+                <select id = "chatroom" name="chatroomId"  defaultValue="select-chatroom" onChange={handleChange}>
                     <option disabled value= "select-chatroom">Choose a Chatroom</option>
                     {displayChatrooms}
                 </select>
 
                 <label htmlFor="user">Select User:</label>
-                <select id = "user" name='userId' onChange={handleChange} defaultValue="select-user">
+                <select id = "user" name="userId" defaultValue="select-user" onChange={handleChange}>
                     <option disabled value= "select-user">Choose a user</option>
                     {mappedUsers}
                 </select>
