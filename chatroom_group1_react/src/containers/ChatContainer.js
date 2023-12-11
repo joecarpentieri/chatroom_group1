@@ -15,6 +15,16 @@ const ChatContainer = () => {
         console.log(data);
     }
 
+    const postChatroom = async (newChatroom) => {
+        const response = await fetch ("http://localhost:8080/chatrooms", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(newChatroom)
+        });
+        const addChatroom = await response.json();
+        setListOfChatrooms([...listOfChatrooms, addChatroom])
+    }
+
     useEffect(() => {
         fetchListOfChatrooms()
     }, [])
@@ -27,7 +37,7 @@ const ChatContainer = () => {
         
         <h2>ChatRoom</h2>
         <ChatList listOfChatrooms={listOfChatrooms}/>
-        <ChatForm />
+        <ChatForm postChatroom={postChatroom}/>
         
         </>
 
