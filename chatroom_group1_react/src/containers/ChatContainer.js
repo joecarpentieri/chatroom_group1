@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import ChatList from '../components/ChatList';
 import ChatForm from '../components/ChatForm';
+import AssignUserForm from '../components/AssignUserForm';
+
 
 
 const ChatContainer = () => {
 
     const [listOfChatrooms, setListOfChatrooms] = useState([])
+    const [listOfUsers, setListOfUsers] = useState([])
 
     const fetchListOfChatrooms = async () => {
         const response = await fetch("http://localhost:8080/chatrooms");
@@ -13,6 +16,14 @@ const ChatContainer = () => {
 
         setListOfChatrooms(data);
         console.log(data);
+    }
+
+    const fetchAllUsers = async ()  => {
+        const response = await fetch ("http://localhost:8080/users")
+        const data = await response.json();
+        setListOfUsers(data)
+        console.log(data)
+        
     }
 
     const postChatroom = async (newChatroom) => {
@@ -25,8 +36,27 @@ const ChatContainer = () => {
         setListOfChatrooms([...listOfChatrooms, addChatroom])
     }
 
+    const patchAssignment = async (chatroomId, userId) => {
+        const response = await fetch (`http://localhost:8080/chatrooms/${chatroomId}/add-user/${userId}`, {
+            method : "PATCH",
+            headers: {"Content-Type": "application/json"},
+            
+        })
+        const assignUser = await response.json()
+        await fetchListOfChatrooms();
+        await fetchAllUsers();
+
+        console.log(assignUser)
+       
+    } 
+
+
+
+
+
     useEffect(() => {
         fetchListOfChatrooms()
+        fetchAllUsers()
     }, [])
 
 
@@ -35,7 +65,8 @@ const ChatContainer = () => {
 
         <>
         <ChatList listOfChatrooms={listOfChatrooms}/>
-        <ChatForm postChatroom={postChatroom}/>
+        <ChatForm postChatroom={postChatroom} />
+        <AssignUserForm listOfUsers = {listOfUsers} listOfChatrooms={listOfChatrooms} patchAssignment ={patchAssignment}/>
         
         </>
 

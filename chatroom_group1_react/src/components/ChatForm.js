@@ -21,8 +21,6 @@ const ChatForm = ({postChatroom}) => {
         setStateChatroom(copiedChatroom);
     })
 
-    
-
     return (  
 
 
@@ -41,6 +39,7 @@ const ChatForm = ({postChatroom}) => {
             />
             <input type='submit' value="Add Chatroom!" />
         </form>
+
         </>
     );
 }
