@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 
 const MessageForm = ({postMessage, chatroomId, listOfUserAssociations}) => {
 
-
-
     const mappedUsers = listOfUserAssociations.map (association => {
         return <option key={association.user.id} value={association.user.id}> 
         {association.user.userName} </option>
@@ -32,18 +30,12 @@ const [stateMessage, setStateMessage] = useState(
         })
     }
 
-
-
     const handleChange = (event) => {
         let propertyName = event.target.name
         let copiedMessage =  {...stateMessage}
         copiedMessage[propertyName] = event.target.value
         setStateMessage(copiedMessage)
     }
-
-
-
-
 
     return ( 
 
