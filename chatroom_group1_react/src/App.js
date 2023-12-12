@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import ChatContainer from './containers/ChatContainer';
 
 function App() {
   return (
     <>
-      <h1>Chatroom</h1>
+      <h1>CHATTERBOX</h1>
       < ChatContainer />
     </>
   );

@@ -10,7 +10,7 @@ const ChatList = ({listOfChatrooms, listOfUsers}) => {
     return ( 
 
             <>
-            <h1>List of Chats</h1>
+            <h1>Chatrooms</h1>
             {displayChatrooms}
             </>
      );

@@ -1,7 +1,10 @@
 const Message = ({message}) => {
     return ( 
         <>
-        <p>{message.userName}: {message.content} [sent:{message.timeCreated}]</p>
+        <div  id="message">
+        <p>{message.userName}: {message.content}</p>
+        <p>[sent:{message.timeCreated}]</p>
+        </div>
         </>
      );
 }

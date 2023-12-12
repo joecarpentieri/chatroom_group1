@@ -3,10 +3,6 @@ import { Box, Button, Modal } from "@mui/material";
 import MessageForm from "./MessageForm";
 import MessageList from './MessageList';
 
-
-// import Box from "@mui/material";
-// import Button from "@mui/material";
-
 const Chat = ({chatroom, listOfUsers}) => {
 
 
@@ -21,9 +17,6 @@ const Chat = ({chatroom, listOfUsers}) => {
     useEffect(() => {
         setListOfMessages(chatroom.messages)
     }, [chatroom.messages]);
-    
-    
-
     
 
 
@@ -43,16 +36,13 @@ const Chat = ({chatroom, listOfUsers}) => {
     
     return ( 
 
-
-
-
         <>
             <Button onClick={handleOpen}>{chatroom.name}</Button>
             <Modal
              open ={open}
              onClose={handleClose}
              >
-                <Box>
+                <Box id="modal-box">
                 <Button onClick={handleClose}>X</Button>
                 <MessageList listOfMessages={listOfMessages} /> 
                 <MessageForm postMessage= {postMessage} chatroomId = {chatroom.id} listOfUsers={listOfUsers} />
