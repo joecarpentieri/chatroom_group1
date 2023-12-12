@@ -8,6 +8,10 @@ const ChatForm = ({postChatroom}) => {
 
     const handleFormSubmit = ((event) => {
         event.preventDefault();
+        if(stateChatroom.name === "") {
+            alert("Chatroom name is not filled out correctly")
+            return
+        }
         postChatroom(stateChatroom);
         setStateChatroom({
             name: ""

@@ -20,6 +20,10 @@ const [stateMessage, setStateMessage] = useState(
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
+        if (stateMessage.userId === null || stateMessage.content === "") {
+            alert("Info not filled out")
+            return;
+        }
         postMessage(chatroomId,stateMessage)
         setStateMessage ({
 

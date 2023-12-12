@@ -20,6 +20,10 @@ const AssignUserForm = ({listOfUsers, listOfChatrooms,patchAssignment}) => {
 
 const handleFormSubmit = (event) =>{
     event.preventDefault();
+    if(stateAssignment.chatroomId === null || stateAssignment.userId === null) {
+        alert("please select the option to proceed")
+        return
+        }
     patchAssignment(stateAssignment["chatroomId"], stateAssignment["userId"])
     setStateAssignment (
         {
