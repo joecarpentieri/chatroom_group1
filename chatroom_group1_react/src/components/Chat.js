@@ -10,8 +10,15 @@ const Chat = ({chatroom}) => {
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
 
-    const listOfUserAssociations = chatroom.userChatroomAssociations;
-    console.log(listOfUserAssociations);
+    // const listOfUserAssociations = chatroom.userChatroomAssociations;
+    const[listOfUserAssociations, setListOfUserAssociations] = useState([]);
+    useEffect(() => {
+        setListOfUserAssociations(chatroom.userChatroomAssociations);
+    
+    },[chatroom.userChatroomAssociations]
+    )
+
+    
 
     const [listOfMessages, setListOfMessages] = useState([]); 
     
