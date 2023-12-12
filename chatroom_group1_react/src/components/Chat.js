@@ -1,17 +1,45 @@
-import { useState } from "react";
-import { Box, Modal } from "@mui/material";
-// import Box from "@mui/material";
-import Button from "@mui/material";
+import React, { useState, useEffect } from 'react';
+import { Box, Button, Modal } from "@mui/material";
+import MessageForm from "./MessageForm";
+import MessageList from './MessageList';
 
-import MessageList from "./MessageList";
-const Chat = ({chatroom}) => {
+
+// import Box from "@mui/material";
+// import Button from "@mui/material";
+
+const Chat = ({chatroom, listOfUsers}) => {
 
 
     const [open, setOpen]= useState(false);
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
 
-    const listOfMessages = chatroom.messages;
+    // const listOfMessages = chatroom.messages;
+
+    const [listOfMessages, setListOfMessages] = useState([]); 
+    
+    useEffect(() => {
+        setListOfMessages(chatroom.messages)
+    }, [chatroom.messages]);
+    
+    
+
+    
+
+
+    const postMessage = async (chatroomId, newMessage) => {
+        const response = await fetch (`http://localhost:8080/chatrooms/${chatroomId}`, {
+             method: "POST",
+             headers: {"Content-Type": "application/json"},
+             body: JSON.stringify(newMessage)
+        });
+
+        const addMessage = await response.json()
+        setListOfMessages([...listOfMessages, addMessage])
+    }
+
+    console.log(postMessage)
+
     
     return ( 
 
@@ -19,14 +47,15 @@ const Chat = ({chatroom}) => {
 
 
         <>
-            <button onClick={handleOpen}>{chatroom.name}</button>
+            <Button onClick={handleOpen}>{chatroom.name}</Button>
             <Modal
              open ={open}
              onClose={handleClose}
              >
                 <Box>
-            <button onClick={handleClose}>X</button>
-            <MessageList listOfMessages={listOfMessages} /> 
+                <Button onClick={handleClose}>X</Button>
+                <MessageList listOfMessages={listOfMessages} /> 
+                <MessageForm postMessage= {postMessage} chatroomId = {chatroom.id} listOfUsers={listOfUsers} />
                 </Box>
                </Modal>
         </>

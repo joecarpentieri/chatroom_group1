@@ -1,9 +1,11 @@
 import Chat from "./Chat";
-const ChatList = ({listOfChatrooms}) => {
+const ChatList = ({listOfChatrooms, listOfUsers}) => {
  
     const displayChatrooms = listOfChatrooms.map( chatroom => {
-        return <Chat chatroom={chatroom} key={chatroom.id}/>
+        return <Chat chatroom={chatroom} key={chatroom.id} listOfUsers = {listOfUsers}/>
     })
+
+
 
     return ( 
 

@@ -44,15 +44,11 @@ const ChatContainer = () => {
         const assignUser = await response.json()
         await fetchListOfChatrooms();
         await fetchAllUsers();
-
-        console.log(assignUser)
-       
+        console.log(assignUser) 
     } 
 
 
-
-
-
+    
     useEffect(() => {
         fetchListOfChatrooms()
         fetchAllUsers()
@@ -63,7 +59,7 @@ const ChatContainer = () => {
     return ( 
 
         <>
-        <ChatList listOfChatrooms={listOfChatrooms}/>
+        <ChatList listOfChatrooms={listOfChatrooms} listOfUsers = {listOfUsers}/>
         <ChatForm postChatroom={postChatroom} />
         <AssignUserForm listOfUsers = {listOfUsers} listOfChatrooms={listOfChatrooms} patchAssignment ={patchAssignment}/>
         
