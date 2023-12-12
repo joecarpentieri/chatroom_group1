@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import ChatList from '../components/ChatList';
 import ChatForm from '../components/ChatForm';
 import AssignUserForm from '../components/AssignUserForm';
+import Navigation from '../components/Navigation';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { create } from '@mui/material/styles/createTransitions';
 
 
 const ChatContainer = () => {
@@ -54,14 +57,34 @@ const ChatContainer = () => {
         fetchAllUsers()
     }, [])
 
-
+    const chatroomRoutes = createBrowserRouter([
+        {
+            path: "/",
+            element: <Navigation />,
+            children: [
+                {
+                    path: "/chatrooms",
+                    element: <ChatList listOfChatrooms={listOfChatrooms}/> 
+                },
+                {
+                    path: "/chatrooms/new",
+                    element: <> 
+                        <ChatForm postChatroom={postChatroom} />
+                        <AssignUserForm listOfUsers = {listOfUsers} listOfChatrooms={listOfChatrooms} patchAssignment ={patchAssignment}/>
+                    </>
+                }
+            ]
+        }
+        
+    ])
 
     return ( 
 
         <>
-        <ChatList listOfChatrooms={listOfChatrooms} />
-        <ChatForm postChatroom={postChatroom} />
-        <AssignUserForm listOfUsers = {listOfUsers} listOfChatrooms={listOfChatrooms} patchAssignment ={patchAssignment}/>
+        {/* <ChatList listOfChatrooms={listOfChatrooms} /> */}
+        {/* <ChatForm postChatroom={postChatroom} />
+        <AssignUserForm listOfUsers = {listOfUsers} listOfChatrooms={listOfChatrooms} patchAssignment ={patchAssignment}/> */}
+        <RouterProvider router={chatroomRoutes} />
         
         </>
 

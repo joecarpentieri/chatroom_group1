@@ -1,4 +1,6 @@
 const Message = ({message}) => {
+    
+
     return ( 
         <>
         <div  id="message">
