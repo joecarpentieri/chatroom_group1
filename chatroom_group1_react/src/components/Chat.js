@@ -3,14 +3,15 @@ import { Box, Button, Modal } from "@mui/material";
 import MessageForm from "./MessageForm";
 import MessageList from './MessageList';
 
-const Chat = ({chatroom, listOfUsers}) => {
+const Chat = ({chatroom}) => {
 
 
     const [open, setOpen]= useState(false);
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
 
-    // const listOfMessages = chatroom.messages;
+    const listOfUserAssociations = chatroom.userChatroomAssociations;
+    console.log(listOfUserAssociations);
 
     const [listOfMessages, setListOfMessages] = useState([]); 
     
@@ -45,7 +46,8 @@ const Chat = ({chatroom, listOfUsers}) => {
                 <Box id="modal-box">
                 <Button onClick={handleClose}>X</Button>
                 <MessageList listOfMessages={listOfMessages} /> 
-                <MessageForm postMessage= {postMessage} chatroomId = {chatroom.id} listOfUsers={listOfUsers} />
+                <MessageForm postMessage= {postMessage} 
+                chatroomId = {chatroom.id} listOfUserAssociations={listOfUserAssociations} />
                 </Box>
                </Modal>
         </>

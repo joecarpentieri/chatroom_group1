@@ -1,11 +1,13 @@
 
 import React, { useState } from 'react';
 
-const MessageForm = ({postMessage, chatroomId, listOfUsers}) => {
+const MessageForm = ({postMessage, chatroomId, listOfUserAssociations}) => {
 
 
-    const mappedUsers = listOfUsers.map (user => {
-        return <option key={user.id} value={user.id}> {user.userName} </option>
+
+    const mappedUsers = listOfUserAssociations.map (association => {
+        return <option key={association.user.id} value={association.user.id}> 
+        {association.user.userName} </option>
     })
 
 const [stateMessage, setStateMessage] = useState(

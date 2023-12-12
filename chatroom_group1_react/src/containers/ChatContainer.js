@@ -59,7 +59,7 @@ const ChatContainer = () => {
     return ( 
 
         <>
-        <ChatList listOfChatrooms={listOfChatrooms} listOfUsers = {listOfUsers}/>
+        <ChatList listOfChatrooms={listOfChatrooms} />
         <ChatForm postChatroom={postChatroom} />
         <AssignUserForm listOfUsers = {listOfUsers} listOfChatrooms={listOfChatrooms} patchAssignment ={patchAssignment}/>
         
