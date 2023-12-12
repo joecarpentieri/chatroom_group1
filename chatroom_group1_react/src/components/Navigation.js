@@ -5,8 +5,8 @@ const Navigation = () => {
     <>
         <nav>
             <ul>
-                <button><Link to="/chatrooms">All Chatrooms</Link></button>
-                <button><Link to="/chatrooms/new">Add new Chat</Link></button>
+                <button className="button"><Link to="/chatrooms">All Chatrooms</Link></button>
+                <button className="button"><Link to="/chatrooms/new">Add new Chat</Link></button>
             </ul>
         </nav>
         <Outlet />

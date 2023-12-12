@@ -41,7 +41,7 @@ useEffect(() => {
         onClose={handleClose}>
           <Box id="log-in-modal">
             <UserForm postUser = {postUser} />
-            <button onClick={handleClose} id="log-in-button">Log In</button>
+            <button onClick={handleClose} id="log-in-button" className='button'>Log In</button>
           </Box>
           
         </Modal> 
