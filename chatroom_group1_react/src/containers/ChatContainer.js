@@ -7,10 +7,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { create } from '@mui/material/styles/createTransitions';
 
 
-const ChatContainer = () => {
+const ChatContainer = ({listOfUsers, setListOfUsers}) => {
 
     const [listOfChatrooms, setListOfChatrooms] = useState([])
-    const [listOfUsers, setListOfUsers] = useState([])
+    // const [listOfUsers, setListOfUsers] = useState([])
 
     const fetchListOfChatrooms = async () => {
         const response = await fetch("http://localhost:8080/chatrooms");
@@ -20,13 +20,13 @@ const ChatContainer = () => {
         console.log(data);
     }
 
-    const fetchAllUsers = async ()  => {
-        const response = await fetch ("http://localhost:8080/users")
-        const data = await response.json();
-        setListOfUsers(data)
-        console.log(data)
+    // const fetchAllUsers = async ()  => {
+    //     const response = await fetch ("http://localhost:8080/users")
+    //     const data = await response.json();
+    //     setListOfUsers(data)
+    //     console.log(data)
         
-    }
+    // }
 
     const postChatroom = async (newChatroom) => {
         const response = await fetch ("http://localhost:8080/chatrooms", {
@@ -46,7 +46,7 @@ const ChatContainer = () => {
         })
         const assignUser = await response.json()
         await fetchListOfChatrooms();
-        await fetchAllUsers();
+        // await fetchAllUsers();
         console.log(assignUser) 
     } 
 
@@ -54,7 +54,7 @@ const ChatContainer = () => {
     
     useEffect(() => {
         fetchListOfChatrooms()
-        fetchAllUsers()
+        // fetchAllUsers()
     }, [])
 
     const chatroomRoutes = createBrowserRouter([
