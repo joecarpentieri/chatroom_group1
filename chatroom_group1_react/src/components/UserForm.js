@@ -12,6 +12,11 @@ const UserForm= ({postUser}) => {
 
     const handleFormSubmit = (event) => {
         event.preventDefault()
+
+        if(stateUser.userName === "" || stateUser.email === "" ) {
+            alert("Please fill in the sign up form")
+            return
+        }
         // alert
         postUser(stateUser)
         setStateUser({
@@ -44,7 +49,7 @@ const UserForm= ({postUser}) => {
             <input 
             id= "user-email"
             name= "email"
-            type="text"
+            type="email"
             placeholder="Type email"
             onChange={handleChange}
             value={stateUser.email}/>
