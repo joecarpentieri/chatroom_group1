@@ -9,6 +9,7 @@
   border-radius: 15px;
   margin: 10px;
   padding: 10px;
+  color: #3C1642;
 }
 body {
   background-color: #139B93;
@@ -20,4 +21,16 @@ body {
   color: #3C1642;
   border-radius: 5px;
   border-color: #B1FE70;
+}
+#message-text{
+  background-color: #B2FF9E;
+  color: #3C1642;
+  border-radius: 5px;
+  border-color: #B2FF9E;
+}
+#chatroom-name{
+  background-color: #B2FF9E;
+  color: #3C1642;
+  border-radius: 5px;
+  border-color: #B2FF9E;
 }
