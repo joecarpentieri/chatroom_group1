@@ -37,3 +37,20 @@ body {
   border-radius: 5px;
   border-color: #B2FF9E;
 }
+
+#log-in-modal{
+  background-color: #139B93;
+  text-align: center;
+  height : 100%;
+  color: black;
+  margin-top: auto;
+}
+
+#log-in-button{
+  background-color: #B1FE70;
+  color: #3C1642;
+  border-radius: 5px;
+  border-color: #B1FE70;
+  margin-top: 25%;
+
+}
