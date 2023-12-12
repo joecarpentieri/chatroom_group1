@@ -46,8 +46,7 @@ const Chat = ({chatroom}) => {
                 <Box id="modal-box">
                 <Button onClick={handleClose}>X</Button>
                 <MessageList listOfMessages={listOfMessages} /> 
-                <MessageForm postMessage= {postMessage} 
-                chatroomId = {chatroom.id} listOfUserAssociations={listOfUserAssociations} />
+                <MessageForm postMessage= {postMessage} chatroomId = {chatroom.id} listOfUserAssociations={listOfUserAssociations} />
                 </Box>
                </Modal>
         </>

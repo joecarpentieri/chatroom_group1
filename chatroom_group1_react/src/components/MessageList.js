@@ -7,9 +7,9 @@ const MessageList = ({listOfMessages}) => {
 
 
     return ( 
-        <>
+        <div className="message">
         {displayMessages}
-        </>
+        </div>
      );
 }
  
