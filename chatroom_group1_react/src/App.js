@@ -4,6 +4,7 @@ import { Box, Modal, Button } from '@mui/material';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import UserForm from './components/UserForm';
+import LoginForm from './components/LoginForm';
 
 function App() {
   const[open, setOpen] = useState(true);
@@ -41,7 +42,8 @@ useEffect(() => {
         onClose={handleClose}>
           <Box id="log-in-modal">
             <UserForm postUser = {postUser} />
-            <button onClick={handleClose} id="log-in-button" className='button'>Log In</button>
+            <LoginForm  handleClose ={handleClose} listOfUsers ={listOfUsers}/>
+            {/* <button onClick={handleClose} id="log-in-button" className='button'>Log In</button> */}
           </Box>
           
         </Modal> 
