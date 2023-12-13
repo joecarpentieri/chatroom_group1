@@ -13,7 +13,7 @@ const LoginForm = ({handleClose, listOfUsers, setCurrentUser}) => {
     const user = listOfUsers.filter(user => user.userName === stateUserName)
     if(userFound) {
         handleClose() 
-        setCurrentUser(user);
+        setCurrentUser(user[0]);
         setStateUserName("")
         } else {
         alert("Invalid user, you are not a ROCKSTAR🎸🎸!!!!!")
@@ -38,8 +38,9 @@ const LoginForm = ({handleClose, listOfUsers, setCurrentUser}) => {
         type="text"
         placeholder="Type username ..."
         onChange={handleChange}
-        value={stateUserName}/>
-        <input type='submit' value= "login"  id = "login-button" className='button'/>            
+        value={stateUserName}
+        className='text-box'/>
+        <input type='submit' value= "login"  id = "login-button" className='button-old'/>            
         </form>
     );
 

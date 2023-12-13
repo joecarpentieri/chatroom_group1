@@ -19,11 +19,12 @@ body {
   padding: 10%;
 }
 
-.button{
+.button-old{
   background-color: #B1FE70;
   color: #3C1642;
   border-radius: 5px;
   border-color: #B1FE70;
+  margin:10px;
 }
 #message-text{
   background-color: #B2FF9E;
@@ -44,6 +45,10 @@ body {
   height : 100%;
   color: black;
   margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #log-in-button{
@@ -53,4 +58,14 @@ body {
   border-color: #B1FE70;
   margin-top: 25%;
 
+}
+.bubbles-names{
+  display: inline-block;
+  margin: 50px
+}
+.text-box{
+  background-color: #B1FE70;
+  color: #3C1642;
+  border-radius: 5px;
+  border-color: #B1FE70;
 }

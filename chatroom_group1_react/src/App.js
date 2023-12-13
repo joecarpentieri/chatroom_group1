@@ -44,6 +44,7 @@ useEffect(() => {
       < Modal 
         open= {open}
         onClose={handleClose}>
+          
           <Box id="log-in-modal">
             <UserForm postUser = {postUser}/>
             <LoginForm  handleClose ={handleClose} listOfUsers ={listOfUsers} setCurrentUser ={setCurrentUser}/>

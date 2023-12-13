@@ -11,7 +11,7 @@ const ChatList = ({listOfChatrooms, fetchListOfChatrooms}) => {
     return ( 
 
             <>
-            <h1>Chatrooms</h1>
+            {/* <h1>Chatrooms</h1> */}
             {displayChatrooms}
             </>
      );
