@@ -64,7 +64,7 @@ const ChatContainer = ({listOfUsers, setListOfUsers}) => {
             children: [
                 {
                     path: "/chatrooms",
-                    element: <ChatList listOfChatrooms={listOfChatrooms}/> 
+                    element: <ChatList listOfChatrooms={listOfChatrooms} fetchListOfChatrooms={fetchListOfChatrooms}/> 
                 },
                 {
                     path: "/chatrooms/new",

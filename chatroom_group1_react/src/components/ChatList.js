@@ -1,8 +1,8 @@
 import Chat from "./Chat";
-const ChatList = ({listOfChatrooms}) => {
+const ChatList = ({listOfChatrooms, fetchListOfChatrooms}) => {
  
     const displayChatrooms = listOfChatrooms.map( (chatroom) => {
-        return <Chat chatroom={chatroom} key={chatroom.id}/>
+        return <Chat chatroom={chatroom} key={chatroom.id} fetchListOfChatrooms={fetchListOfChatrooms}/>
     })
     console.log(displayChatrooms);
 

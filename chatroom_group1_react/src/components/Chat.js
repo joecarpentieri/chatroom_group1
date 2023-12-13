@@ -3,7 +3,7 @@ import { Box, Button, Modal } from "@mui/material";
 import MessageForm from "./MessageForm";
 import MessageList from './MessageList';
 
-const Chat = ({chatroom}) => {
+const Chat = ({chatroom, fetchListOfChatrooms}) => {
 
 
     const [open, setOpen]= useState(false);
@@ -45,7 +45,7 @@ const Chat = ({chatroom}) => {
              >
                 <Box id="modal-box">
                 <Button onClick={handleClose}>X</Button>
-                <MessageList listOfMessages={listOfMessages} /> 
+                <MessageList listOfMessages={listOfMessages} fetchListOfChatrooms={fetchListOfChatrooms}/> 
                 <MessageForm postMessage= {postMessage} chatroomId = {chatroom.id} listOfUserAssociations={listOfUserAssociations} />
                 </Box>
                </Modal>

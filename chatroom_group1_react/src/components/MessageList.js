@@ -1,8 +1,8 @@
 import Message from "./Message";
-const MessageList = ({listOfMessages}) => {
+const MessageList = ({listOfMessages, fetchListOfChatrooms}) => {
 
     const displayMessages = listOfMessages.map((message) => {
-        return <Message key={message.id} message={message} />
+        return <Message key={message.id} message={message} fetchListOfChatrooms={fetchListOfChatrooms}/>
     })
 
 
