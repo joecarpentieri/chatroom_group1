@@ -39,7 +39,7 @@ const ChatForm = ({postChatroom}) => {
             onChange={handleChange}
             
             />
-            <input type='submit' value="Add Chatroom!" className="button"/>
+            <input type='submit' value="Add Chatroom!" className="button-old"/>
         </form>
 
         </>

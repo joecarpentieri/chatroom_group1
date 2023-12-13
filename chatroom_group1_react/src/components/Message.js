@@ -78,7 +78,7 @@ const Message = ({message, fetchListOfChatrooms}) => {
             defaultValue="select-reaction"
             onChange={handleChange}
             ><option disabled value="select-reaction"></option>{reactionOptions}</select>
-            <input type="submit" value="addReact"/>
+            <input type="submit" value="addReact" className="button-old"/>
         </form>
         </>
      );

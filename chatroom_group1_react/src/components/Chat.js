@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Box, Button, Modal } from "@mui/material";
 import MessageForm from "./MessageForm";
 import MessageList from './MessageList';
+import '../index.css';
 
 const Chat = ({chatroom, fetchListOfChatrooms}) => {
 
@@ -11,7 +12,7 @@ const Chat = ({chatroom, fetchListOfChatrooms}) => {
     const handleClose = () => setOpen(false)
 
     const listOfUserAssociations = chatroom.userChatroomAssociations;
-    console.log(listOfUserAssociations);
+    // console.log(listOfUserAssociations);
 
     const [listOfMessages, setListOfMessages] = useState([]); 
     
@@ -38,7 +39,8 @@ const Chat = ({chatroom, fetchListOfChatrooms}) => {
     return ( 
 
         <>
-            <Button onClick={handleOpen}>{chatroom.name}</Button>
+        <article className="bubbles-names"> 
+            <Button onClick={handleOpen} className='bubble' id="bubble">{chatroom.name}</Button>
             <Modal
              open ={open}
              onClose={handleClose}
@@ -49,6 +51,7 @@ const Chat = ({chatroom, fetchListOfChatrooms}) => {
                 <MessageForm postMessage= {postMessage} chatroomId = {chatroom.id} listOfUserAssociations={listOfUserAssociations} />
                 </Box>
                </Modal>
+               </article>
         </>
      );
 }

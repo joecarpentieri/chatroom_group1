@@ -47,18 +47,18 @@ const handleChange = (event) => {
             <h2>Add user to ChatRoom</h2>
             <form id = "assignmentForm" onSubmit={handleFormSubmit}> 
                 <label htmlFor="chatroom">Select Chatroom:</label>
-                <select id = "chatroom" name="chatroomId"  defaultValue="select-chatroom" onChange={handleChange}>
+                <select className='text-box' id = "chatroom" name="chatroomId"  defaultValue="select-chatroom" onChange={handleChange}>
                     <option disabled value= "select-chatroom">Choose a Chatroom</option>
                     {displayChatrooms}
                 </select>
 
                 <label htmlFor="user">Select User:</label>
-                <select id = "user" name="userId" defaultValue="select-user" onChange={handleChange}>
+                <select className='text-box' id = "user" name="userId" defaultValue="select-user" onChange={handleChange}>
                     <option disabled value= "select-user">Choose a user</option>
                     {mappedUsers}
                 </select>
 
-                <input type="submit" value= "add user to Chatroom" id = "add-button" className="button" />
+                <input type="submit" value= "add user to Chatroom" id = "add-button" className="button-old" />
                 </form>
             
             </>
