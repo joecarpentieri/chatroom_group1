@@ -19,11 +19,6 @@ const LoginForm = ({handleClose,listOfUsers}) => {
 
     }
 
- 
-
-
-
-
 
     const handleChange = (event) => {
         let copiedUserName = {...stateUserName}
