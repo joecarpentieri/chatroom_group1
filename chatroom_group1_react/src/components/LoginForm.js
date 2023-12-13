@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const LoginForm = ({handleClose,listOfUsers}) => {
+const LoginForm = ({handleClose, listOfUsers, setCurrentUser}) => {
 
     
     const[stateUserName, setStateUserName]= useState("")
@@ -10,13 +10,14 @@ const LoginForm = ({handleClose,listOfUsers}) => {
     event.preventDefault();
 
     const userFound = listOfUsers.find(user => user.userName === stateUserName)
+    const user = listOfUsers.filter(user => user.userName === stateUserName)
     if(userFound) {
-         handleClose()   
+        handleClose() 
+        setCurrentUser(user);
         setStateUserName("")
         } else {
-         alert("invalid user, you are not a ROCKSTAR🎸🎸!!!!!")
+        alert("Invalid user, you are not a ROCKSTAR🎸🎸!!!!!")
      }
-
     }
 
 
@@ -38,9 +39,10 @@ const LoginForm = ({handleClose,listOfUsers}) => {
         placeholder="Type username ..."
         onChange={handleChange}
         value={stateUserName}/>
-        <input type='submit' value= "login"  id = "login-button" className='button'/>             
+        <input type='submit' value= "login"  id = "login-button" className='button'/>            
         </form>
     );
+
  }
  
 export default LoginForm;

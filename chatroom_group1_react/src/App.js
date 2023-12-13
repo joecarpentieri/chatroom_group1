@@ -39,7 +39,7 @@ useEffect(() => {
   return (
     <>
       <h1>CHATTERBOX</h1>
-      < ChatContainer setListOfUsers={setListOfUsers} listOfUsers={listOfUsers}/>
+      < ChatContainer listOfUsers={listOfUsers}/>
       {/* <p>{currentUser}</p> */}
       < Modal 
         open= {open}

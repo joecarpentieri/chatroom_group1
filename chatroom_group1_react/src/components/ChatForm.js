@@ -26,9 +26,6 @@ const ChatForm = ({postChatroom}) => {
     })
 
     return (  
-
-
-
         <>
         <form id="chatroomForm" onSubmit={handleFormSubmit}>
             <h3>Add a Chatroom</h3>
