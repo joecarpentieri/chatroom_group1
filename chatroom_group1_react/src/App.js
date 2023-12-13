@@ -11,6 +11,9 @@ function App() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const [listOfUsers, setListOfUsers] = useState([])
+
+  const [currentUser, setCurrentUser] = useState(listOfUsers[0])
+
   const postUser = async(newUser) => {
     const response = await fetch ("http://localhost:8080/users", {
       method : "POST", 
@@ -37,13 +40,13 @@ useEffect(() => {
     <>
       <h1>CHATTERBOX</h1>
       < ChatContainer setListOfUsers={setListOfUsers} listOfUsers={listOfUsers}/>
+      {/* <p>{currentUser}</p> */}
       < Modal 
         open= {open}
         onClose={handleClose}>
           <Box id="log-in-modal">
-            <UserForm postUser = {postUser} />
-            <LoginForm  handleClose ={handleClose} listOfUsers ={listOfUsers}/>
-            {/* <button onClick={handleClose} id="log-in-button" className='button'>Log In</button> */}
+            <UserForm postUser = {postUser}/>
+            <LoginForm  handleClose ={handleClose} listOfUsers ={listOfUsers} setCurrentUser ={setCurrentUser}/>
           </Box>
           
         </Modal> 

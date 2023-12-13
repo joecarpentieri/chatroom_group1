@@ -8,19 +8,20 @@ const LoginForm = ({handleClose,listOfUsers}) => {
 
     const handleFormSubmit = (event) => {
     event.preventDefault();
-    
-    
-    for (let i=0; i < listOfUsers.length; i++) {
-        if(stateUserName === listOfUsers[i].userName){
-            handleClose()
-            setStateUserName("")
+
+    const userFound = listOfUsers.find(user => user.userName === stateUserName)
+    if(userFound) {
+         handleClose()   
+        setStateUserName("")
         } else {
-            alert("invalid user, must be a valid ROCKSTAR 🎸🎸")
-            return
-        }   
+         alert("invalid user, you are not a ROCKSTAR🎸🎸!!!!!")
+     }
+
     }
 
-}
+ 
+
+
 
 
 
@@ -45,6 +46,6 @@ const LoginForm = ({handleClose,listOfUsers}) => {
         <input type='submit' value= "login"  id = "login-button" className='button'/>             
         </form>
     );
-}
+ }
  
 export default LoginForm;
