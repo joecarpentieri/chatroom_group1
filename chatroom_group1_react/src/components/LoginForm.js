@@ -7,17 +7,17 @@ const LoginForm = ({handleClose, listOfUsers, setCurrentUser}) => {
 
 
     const handleFormSubmit = (event) => {
-    event.preventDefault();
+        event.preventDefault();
 
-    const userFound = listOfUsers.find(user => user.userName === stateUserName)
-    const user = listOfUsers.filter(user => user.userName === stateUserName)
-    if(userFound) {
-        handleClose() 
-        setCurrentUser(user);
-        setStateUserName("")
-        } else {
-        alert("Invalid user, you are not a ROCKSTAR🎸🎸!!!!!")
-     }
+        const userFound = listOfUsers.find(user => user.userName === stateUserName)
+    // const user = listOfUsers.filter(user => user.userName === stateUserName)
+        if(userFound) {
+            handleClose() 
+            setCurrentUser(userFound);
+            setStateUserName("")
+            } else {
+            alert("Invalid user, you are not a ROCKSTAR🎸🎸!!!!!")
+        }
     }
 
 
