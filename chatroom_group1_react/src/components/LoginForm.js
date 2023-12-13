@@ -9,18 +9,16 @@ const LoginForm = ({handleClose,listOfUsers}) => {
     const handleFormSubmit = (event) => {
     event.preventDefault();
     
-    
-    for (let i=0; i < listOfUsers.length; i++) {
-        if(stateUserName === listOfUsers[i].userName){
-            handleClose()
-            setStateUserName("")
-        } else {
-            alert("invalid user, must be a valid ROCKSTAR 🎸🎸")
-            return
-        }   
+    const userExists = listOfUsers.some((user) => user.userName === stateUserName);
+
+    if (userExists) {
+        handleClose();
+        setStateUserName("");
+    } else {
+        alert("Invalid user, must be a valid ROCKSTAR 🎸");
     }
 
-}
+};
 
 
 
