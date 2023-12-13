@@ -18,6 +18,18 @@ const Message = ({message, fetchListOfChatrooms}) => {
         return <option key={reactionOptionsList.indexOf(reaction)} value={reaction}>{reaction}</option>
     })
 
+
+    let messageTime = new Date(message.timeCreated)
+    const formattedDate = messageTime.toLocaleString("en-GB", {
+        
+        day: "2-digit",
+        month: "2-digit",
+        year:"numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    })
+
     const patchReaction = async (messageId, reaction) => {
         const response = await fetch(`http://localhost:8080/messages/${messageId}`, {
             method : "PATCH",
@@ -55,7 +67,7 @@ const Message = ({message, fetchListOfChatrooms}) => {
         <div  id="message">
         <p>{message.userName}: {message.content}</p>
         <p>{listOfReactions}</p>
-        <p>[sent:{message.timeCreated}]</p>
+        <p>[sent:{formattedDate}]</p>
         </div>
 
         <form id="reaction-form" onSubmit={handleFormSubmit}>
