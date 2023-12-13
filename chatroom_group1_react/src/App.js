@@ -39,8 +39,9 @@ useEffect(() => {
   return (
     <>
       <h1>CHATTERBOX</h1>
+      current user:{currentUser ? <p>{currentUser.userName}</p> : null}
       < ChatContainer listOfUsers={listOfUsers}/>
-      {currentUser ? <p>{currentUser.userName}</p> : null}
+      
       < Modal 
         open= {open}
         onClose={handleClose}>
