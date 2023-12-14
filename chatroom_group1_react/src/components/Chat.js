@@ -48,7 +48,7 @@ const Chat = ({chatroom, fetchListOfChatrooms, currentUser}) => {
                 <Box id="modal-box">
                 <Button onClick={handleClose}>X</Button>
                 <MessageList listOfMessages={listOfMessages} fetchListOfChatrooms={fetchListOfChatrooms} currentUser={currentUser}/> 
-                <MessageForm postMessage= {postMessage} chatroomId = {chatroom.id} listOfUserAssociations={listOfUserAssociations} />
+                <MessageForm postMessage= {postMessage} chatroomId = {chatroom.id} listOfUserAssociations={listOfUserAssociations} currentUser={currentUser}/>
                 </Box>
                </Modal>
                </article>
