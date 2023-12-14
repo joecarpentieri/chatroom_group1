@@ -12,7 +12,7 @@ const Message = ({message, fetchListOfChatrooms, currentUser}) => {
 
     const [updatedMessage, setUpdatedMessage] = useState(message)
 
-    const reactionOptionsList = ["😄", "😂", "☹️", "😍", "✅"]
+    const reactionOptionsList = ["😄", "😂", "☹️", "😍", "✅", "🎸"]
 
     const reactionOptions = reactionOptionsList.map(reaction => {
         return <option key={reactionOptionsList.indexOf(reaction)} value={reaction}>{reaction}</option>

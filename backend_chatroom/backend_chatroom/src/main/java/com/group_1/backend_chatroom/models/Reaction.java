@@ -6,7 +6,8 @@ public enum Reaction {
     JOY("😂"),
     FROWN("☹️"),
     HEARTEYES("😍"),
-    TICK("✅");
+    TICK("✅"),
+    ROCKSTAR("🎸");
 
     private final String emoji;
 
@@ -27,6 +28,8 @@ public enum Reaction {
             case "✅":
                 return  TICK;
             // handle other cases if needed
+            case "🎸":
+                return ROCKSTAR;
             default:
                 throw new IllegalArgumentException("Invalid Reaction value: " + emoji);
         }
