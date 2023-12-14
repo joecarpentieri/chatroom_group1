@@ -67,9 +67,9 @@ const Message = ({message, fetchListOfChatrooms, currentUser}) => {
     return ( 
         <>
         <div  id="message" className={isCurrentUser ? "user" : "notUser"}>
-        <p>{message.userName}: {message.content}</p>
+        <p>{message.userName}: {message.content} </p>
         <p>{listOfReactions}</p>
-        <p>[sent:{formattedDate}]</p>
+        <p>   [sent:{formattedDate}]</p>
         
         <form  id={isCurrentUser ? "reaction-form" : "non-reaction"} onSubmit={handleFormSubmit}>
             <label htmlFor="reaction"></label>

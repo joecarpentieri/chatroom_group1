@@ -47,30 +47,30 @@ body {
   background-color: #C6F69F;
   color: #3C1642;
   border-radius: 5px;
-  border-color: #B1FE70;
+  border-color: #C6F69F;
   margin:10px;
   text-decoration: none;
 }
 #message-text{
-  background-color: #B2FF9E;
+  background-color: #C6F69F;
   color: #163E42;
   border-radius: 15px;
-  border-color: #B2FF9E;
+  border-color: #C6F69F;
 }
 #chatroom-name{
-  background-color: #B2FF9E;
+  background-color: #C6F69F;
   color: #3C1642;
   border-radius: 5px;
-  border-color: #B2FF9E;
+  border-color: #C6F69F;
 }
 #message{
   margin: 25px;
  }
 #log-in-button{
-  background-color: #B1FE70;
+  background-color: #C6F69F;
   color: #3C1642;
   border-radius: 5px;
-  border-color: #B1FE70;
+  border-color: #C6F69F;
   margin-top: 25%;
 }
 .bubbles-names{
@@ -78,10 +78,10 @@ body {
   margin: 50px
 }
 .text-box{
-  background-color: #B1FE70;
+  background-color: #C6F69F;
   color: #3C1642;
   border-radius: 10px;
-  border-color: #B1FE70;
+  border-color: #C6F69F;
 }
 .user{
   display: flex;
