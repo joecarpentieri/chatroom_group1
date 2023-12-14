@@ -120,3 +120,9 @@ body {
 		transform: translate(3%,0);
 	}
 }
+h1 {
+
+	font-family: 'Bubblegum Sans';
+	font-size: 30px;
+	color: rgb(5, 79, 143);
+}
