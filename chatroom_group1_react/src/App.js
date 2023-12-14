@@ -20,7 +20,6 @@ function App() {
       event.preventDefault();
 
       const userFound = listOfUsers.find(user => user.userName === stateUserName)
-  // const user = listOfUsers.filter(user => user.userName === stateUserName)
       if(userFound) {
           handleClose() 
           setCurrentUser(userFound);
