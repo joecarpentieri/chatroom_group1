@@ -10,8 +10,6 @@ const Message = ({message, fetchListOfChatrooms, currentUser}) => {
         message.reactions
     )
 
-    const [updatedMessage, setUpdatedMessage] = useState(message)
-
     const reactionOptionsList = ["😄", "😂", "☹️", "😍", "✅", "🎸"]
 
     const reactionOptions = reactionOptionsList.map(reaction => {
