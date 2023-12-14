@@ -141,24 +141,11 @@ position: relative;
 max-width: 400px;
 padding: 20x;
 border-radius: 20px;
-background-color:#2813b3 (194,248,248,0.8);
-border: 1px solid #2813b3;
-top:15;
+background-color:rgba(7, 56, 120, 0.5);
+border: 1px solid #faf9fd;
+top:25;
 }
-.bubble-text::before {
-content: '';
-position:absolute;
-left:0;
-top: 50%;
-width: 0;
-height: 0;
-border: 48px solid transparent;
-border-right-color: rgb(23, 33, 135);
-border-left: 0;
-border-bottom: 0;
-margin-top: -24px;
-margin-left: -48px;
-}
+
 
 h1 {
   color: white;
