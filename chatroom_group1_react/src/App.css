@@ -1,5 +1,7 @@
 #modal-box{
-  background-color: #139B93;
+  background-image: url("./Images/phot.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 10%;
   height : 100%;
   overflow: auto;
@@ -8,19 +10,34 @@
   flex-wrap: wrap;
 }
 
-#message{
-  margin: 25px;
- }
-
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("Images/phot.png");
+  width: 100vw;
+  height: 100vh; 
+  margin: 0;
+  padding: 0;
+  position: relative;
+  place-items: center;
+}
+#log-in-modal {
+  background-image: url("./Images/phot.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 100%;
+  color: black;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .message {
   display: flex;
   flex-direction: column;
   width: 90%;
-}
-
-body {
-  background-color: #139B93;
-  padding: 10%;
 }
 
 .button-old{
@@ -29,6 +46,7 @@ body {
   border-radius: 5px;
   border-color: #B1FE70;
   margin:10px;
+  text-decoration: none;
 }
 #message-text{
   background-color: #B2FF9E;
@@ -42,18 +60,10 @@ body {
   border-radius: 5px;
   border-color: #B2FF9E;
 }
+#message{
+  margin: 25px;
+ }
 
-#log-in-modal{
-  background-color: #139B93;
-  text-align: center;
-  height : 100%;
-  color: black;
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 #log-in-button{
   background-color: #B1FE70;
