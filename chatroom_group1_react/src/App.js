@@ -57,7 +57,7 @@ useEffect(() => {
     <>
       <h1>CHATTERBOX</h1>
       current user:{currentUser ? <p>{currentUser.userName}</p> : null}
-      < ChatContainer listOfUsers={listOfUsers}/>
+      < ChatContainer listOfUsers={listOfUsers} currentUser={currentUser}/>
       <button className='button-old' onClick={handleOpen}>Log Out</button>
       < Modal 
         open= {open}

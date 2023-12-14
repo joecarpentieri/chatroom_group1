@@ -4,7 +4,7 @@ import MessageForm from "./MessageForm";
 import MessageList from './MessageList';
 import '../index.css';
 
-const Chat = ({chatroom, fetchListOfChatrooms}) => {
+const Chat = ({chatroom, fetchListOfChatrooms, currentUser}) => {
 
 
     const [open, setOpen]= useState(false);
@@ -47,7 +47,7 @@ const Chat = ({chatroom, fetchListOfChatrooms}) => {
              >
                 <Box id="modal-box">
                 <Button onClick={handleClose}>X</Button>
-                <MessageList listOfMessages={listOfMessages} fetchListOfChatrooms={fetchListOfChatrooms}/> 
+                <MessageList listOfMessages={listOfMessages} fetchListOfChatrooms={fetchListOfChatrooms} currentUser={currentUser}/> 
                 <MessageForm postMessage= {postMessage} chatroomId = {chatroom.id} listOfUserAssociations={listOfUserAssociations} />
                 </Box>
                </Modal>

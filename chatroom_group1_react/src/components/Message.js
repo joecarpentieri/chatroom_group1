@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-const Message = ({message, fetchListOfChatrooms}) => {
+const Message = ({message, fetchListOfChatrooms, currentUser}) => {
 
     const [stateReaction, setStateReaction] = useState({
         reaction: ""
@@ -17,6 +17,8 @@ const Message = ({message, fetchListOfChatrooms}) => {
     const reactionOptions = reactionOptionsList.map(reaction => {
         return <option key={reactionOptionsList.indexOf(reaction)} value={reaction}>{reaction}</option>
     })
+
+    const isCurrentUser = message.userName === currentUser.userName
 
 
     let messageTime = new Date(message.timeCreated)
@@ -64,12 +66,11 @@ const Message = ({message, fetchListOfChatrooms}) => {
 
     return ( 
         <>
-        <div  id="message">
+        <div  id="message" className={isCurrentUser ? "user" : "notUser"}>
         <p>{message.userName}: {message.content}</p>
         <p>{listOfReactions}</p>
         <p>[sent:{formattedDate}]</p>
-        </div>
-
+        
         <form id="reaction-form" onSubmit={handleFormSubmit}>
             <label htmlFor="reaction"></label>
             <select
@@ -80,6 +81,7 @@ const Message = ({message, fetchListOfChatrooms}) => {
             ><option disabled value="select-reaction"></option>{reactionOptions}</select>
             <input type="submit" value="addReact" className="button-old"/>
         </form>
+        </div>
         </>
      );
 }

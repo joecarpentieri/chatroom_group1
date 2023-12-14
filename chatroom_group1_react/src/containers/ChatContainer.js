@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 
-const ChatContainer = ({listOfUsers}) => {
+const ChatContainer = ({listOfUsers, currentUser}) => {
 
     const [listOfChatrooms, setListOfChatrooms] = useState([])
 
@@ -52,7 +52,7 @@ const ChatContainer = ({listOfUsers}) => {
             children: [
                 {
                     path: "/chatrooms",
-                    element: <ChatList listOfChatrooms={listOfChatrooms} fetchListOfChatrooms={fetchListOfChatrooms}/> 
+                    element: <ChatList listOfChatrooms={listOfChatrooms} fetchListOfChatrooms={fetchListOfChatrooms} currentUser={currentUser}/> 
                 },
                 {
                     path: "/chatrooms/new",
