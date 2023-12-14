@@ -11,8 +11,25 @@ function App() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const [listOfUsers, setListOfUsers] = useState([])
-
   const [currentUser, setCurrentUser] = useState(null)
+  const[stateUserName, setStateUserName]= useState("")
+
+
+  const handleFormSubmit = (event) => {
+
+      event.preventDefault();
+
+      const userFound = listOfUsers.find(user => user.userName === stateUserName)
+  // const user = listOfUsers.filter(user => user.userName === stateUserName)
+      if(userFound) {
+          handleClose() 
+          setCurrentUser(userFound);
+          setStateUserName("")
+          } else {
+          alert("Invalid user, you are not a ROCKSTAR🎸🎸!!!!!")
+      }
+
+  }
 
   const postUser = async(newUser) => {
     const response = await fetch ("http://localhost:8080/users", {
@@ -48,7 +65,7 @@ useEffect(() => {
           
           <Box id="log-in-modal">
             <UserForm postUser = {postUser}/>
-            <LoginForm  handleClose ={handleClose} listOfUsers ={listOfUsers} setCurrentUser ={setCurrentUser}/>
+            <LoginForm  setStateUserName={setStateUserName} stateUserName={stateUserName} handleFormSubmit = {handleFormSubmit}/>
           </Box>
           
         </Modal> 

@@ -1,26 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-const LoginForm = ({handleClose, listOfUsers, setCurrentUser}) => {
+const LoginForm = ({setStateUserName,stateUserName, handleFormSubmit }) => {
 
-    
-    const[stateUserName, setStateUserName]= useState("")
-
-
-    const handleFormSubmit = (event) => {
-
-        event.preventDefault();
-
-        const userFound = listOfUsers.find(user => user.userName === stateUserName)
-    // const user = listOfUsers.filter(user => user.userName === stateUserName)
-        if(userFound) {
-            handleClose() 
-            setCurrentUser(userFound);
-            setStateUserName("")
-            } else {
-            alert("Invalid user, you are not a ROCKSTAR🎸🎸!!!!!")
-        }
-
-    }
+   
 
 
     const handleChange = (event) => {
