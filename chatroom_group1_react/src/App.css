@@ -10,15 +10,7 @@
   flex-wrap: wrap;
 }
 
-#message{
-  margin: 25px;
- }
 
-.message {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-}
 
 body {
   background-size: cover;
@@ -30,6 +22,24 @@ body {
   padding: 0;
   position: relative;
   place-items: center;
+}
+#log-in-modal {
+  background-image: url("./Images/phot.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 100%;
+  color: black;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
 }
 .button-old{
   background-color: #B1FE70;
@@ -51,20 +61,10 @@ body {
   border-radius: 5px;
   border-color: #B2FF9E;
 }
+#message{
+  margin: 25px;
+ }
 
-#log-in-modal {
-  background-image: url("./Images/phot.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
-  height: 100%;
-  color: black;
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 #log-in-button{
   background-color: #B1FE70;
