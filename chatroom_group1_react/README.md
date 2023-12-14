@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# JARGon REACTors: where JavaScript meets attitude
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a front-end REACT application using the following API: [BackEnd Project](https://github.com/Al-B-code/backend_chatroom). In your browser you are able to log in, view all chatrooms send and react to messages as well as other features.s
 
-## Available Scripts
+### :dart: AIM:
+To provide a chatroom application which connects users to eachother through messaging and reaction functionalities.
 
-In the project directory, you can run:
+## Contents
+- [Project Set Up](#project-set-up)
+- [Project MVP and Extensions](#project-MVP-and-extensions)
+- [Structure](#Structure)
+- [Features](#features)
+- [Contributors](#contributors)
 
-### `npm start`
+## Project Set Up
+Clone the above fullstack repository:
+```git@github.com:joecarpentieri/chatroom_group1.git```
 
-Runs the app in the development mode.\
+In the terminal, you can run:
+### ```npm i```
+### ```npm install @mui/material @emotion/react @emotion/styled```
+### ```npm i react-router-dom```
+### ```npm start```
+
+Runs the app.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Project MVP and Extensions
+### MVP
+* :white_check_mark: Display a page of all available chats
+* :white_check_mark: Add a new chat
+* :white_check_mark: Click on a chat to be taken to a new page, display 
+all messages in that chatroom
+* :white_check_mark: Send a message using a post request from a 
+messageForm
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Extensions
+* :white_check_mark: Have the home screen as a log in and sign up page
+* :white_check_mark: Patch request to react to messages
+* :white_check_mark: CSS for bubbles chat
+* :white_check_mark: Use routes to create a page to add new chat
+* :white_check_mark: Add a user to a chat
+* Edit user Info
+ 
+### Advanced Extensions 
+* Functionality to log in a user with a password
+* Access another API for avatar profile images
 
-### `npm run build`
+## Structure
+Built using:
+- JvaScript
+- CSS
+- BackEnd API
+- Material UI
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Wireframe and Component Diagram:
+![wireframe](/images/wireframe.jpg)
+![component](/images/component.jpg)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
+1. Log in and sign up page- only existing users can log in
+2. Page to view all chatrooms 
+3. Page to add new chat and add users to a chat
+4. View individual chatrooms and the messages in that chatroom
+5. Send a message in a chatroom from one of the users belonging to that chat 
+6. React to messages
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contributors 
+JARGon REACTors...
+* **J**oe
+* **A**anis
+* **R**osie
+* **G**isele 
