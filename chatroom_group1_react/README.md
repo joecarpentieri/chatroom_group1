@@ -17,7 +17,7 @@ To provide a chatroom application which connects users to eachother through mess
 Clone the above fullstack repository:
 ```git@github.com:joecarpentieri/chatroom_group1.git```
 
-In the terminal, you can run:
+In the terminal, you can run the following to install the necessary packages:
 ### ```npm i```
 ### ```npm install @mui/material @emotion/react @emotion/styled```
 ### ```npm i react-router-dom```
@@ -57,7 +57,7 @@ Built using:
 
 Wireframe and Component Diagram:
 ![wireframe](wireframe.jpg)
-![component](/images/component.jpg)
+![component](component.jpg)
 
 ## Features
 1. Log in and sign up page- only existing users can log in
