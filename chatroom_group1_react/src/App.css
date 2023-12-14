@@ -6,19 +6,10 @@
   max-height: calc(100vh - 200px);
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
 }
 
 #message{
-  /* text-align: center;
-  background-color: #B1FE70;
-  border-radius: 15px; */
   margin: 25px;
-  /* padding: 10px;
-  /* color: #3C1642; */
-  /* display: flex;
-  flex-direction: row;
-  display: block; */
  }
 
 .message {
@@ -29,7 +20,7 @@
 
 body {
   background-color: #139B93;
-  padding: 50%;
+  padding: 10%;
 }
 
 .button-old{
@@ -85,38 +76,44 @@ body {
 
 .user{
   display: flex;
-  /* justify-content: flex-end; */
   padding-right: 30px;
   position: relative;
-  margin: 10px 0;
+  margin: 10px;
   width: 50%;
-  color: #3C1642;
-  background-color: #000000;
+  color: #ffffff;
+  background-color: #00754a;
   padding: 10px;
-  align-self: flex-start;
+  align-self: flex-end;
+  border-radius: 25px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .notUser{
   color: #ffffff;
-  background-color: #4d2929;
-  align-self: flex-end;
-  /* justify-content: flex-start; */
+  background-color: #194590;
+  align-self: flex-start;
   padding-left: 0px;
   padding-right: 0px;
   padding: 10px;
-  /* width: 50%; */
   align-self: right;
   width: 50%;
+  border-radius: 25px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #message-form{
   position: absolute;
-  bottom: 10px;
+  bottom: 1px;
   width: 50%;
-  /* border: 3px solid #8AC007; */
   position: fixed;
   left: 50%;
-  bottom: 20px;
+  /* bottom: 20px; */
   transform: translate(-50%, -50%);
   margin: 0 auto;
+}
+
+#reaction-form{
+  bottom: 10px;
+  position: relative;
+  visibility: hidden;
 }
