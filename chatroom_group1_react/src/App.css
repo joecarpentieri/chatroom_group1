@@ -87,7 +87,7 @@ body {
   display: flex;
   padding-right: 30px;
   position: relative;
-  margin: 10px;
+  margin: 50px;
   width: 50%;
   color: #FFFFFF;
   background-color: #00754A;
@@ -134,4 +134,8 @@ a:hover {
 }
 a:active {
   text-decoration: #0C2224;
+}
+
+#p{
+  margin-left: 10px;
 }
