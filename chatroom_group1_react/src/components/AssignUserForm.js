@@ -43,7 +43,7 @@ const handleChange = (event) => {
 
 
     return ( 
-            <>
+            <div className="bubble-text">
             <h2>Add user to ChatRoom</h2>
             <form id = "assignmentForm" onSubmit={handleFormSubmit}> 
                 <label htmlFor="chatroom">Select Chatroom:</label>
@@ -61,7 +61,7 @@ const handleChange = (event) => {
                 <input type="submit" value= "add user to Chatroom" id = "add-button" className="button-old" />
                 </form>
             
-            </>
+            </div>
 
     );
 }

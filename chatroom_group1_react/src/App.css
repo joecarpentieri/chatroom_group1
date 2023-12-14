@@ -19,6 +19,7 @@ body {
   padding: 0;
   position: relative;
   place-items: center;
+
 }
 #log-in-modal {
   background-image: url("./Images/phot.png");
@@ -143,16 +144,34 @@ a:active {
 
 .bubble-text {
 position: relative;
-max-width: 400px;
-padding: 20x;
+max-width: 500px;
+padding: 20px;
 border-radius: 20px;
 background-color:rgba(7, 56, 120, 0.5);
-border: 1px solid #faf9fd;
-top:25;
+border: 1px solid rgb(255, 235, 205);
+top: 0px;
+margin: auto;
+/* display: flex; */
+/* justify-content: space-around; */
+text-align: center;
+align-items: center;
+
+
+} 
+
+h1, label {
+
+  color: blanchedalmond;
+}
+
+h3,h2 {
+
+  color: #3C1642;
+}
+
+.current-user {
+  color: #3C1642;
 }
 
 
-h1 {
-  color: white;
-}
 

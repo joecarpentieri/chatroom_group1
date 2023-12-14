@@ -57,8 +57,10 @@ useEffect(() => {
     <>
     <div className="bubble-text">
       <h1>CHATTERBOX</h1>
-     </div> 
+     </div >
+     <div className='current-user'>
      current user:{currentUser ? <p>{currentUser.userName}</p> : null}
+     </div> 
       <button className='button-old' onClick={handleOpen}>Log Out</button>
       < ChatContainer listOfUsers={listOfUsers} currentUser={currentUser}/>
       

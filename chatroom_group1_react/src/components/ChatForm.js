@@ -26,7 +26,7 @@ const ChatForm = ({postChatroom}) => {
     })
 
     return (  
-        <>
+        <div className='bubble-text'>
         <form id="chatroomForm" onSubmit={handleFormSubmit}>
             <h2>Add a Chatroom</h2>
             <label htmlFor='chatroom-name' >Chatroom name:</label>
@@ -42,7 +42,7 @@ const ChatForm = ({postChatroom}) => {
             <input type='submit' value="Add Chatroom!" className="button-old"/>
         </form>
 
-        </>
+        </div>
     );
 }
  
