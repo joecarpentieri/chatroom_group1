@@ -1,6 +1,6 @@
 # JARGon REACTors: where JavaScript meets attitude
 
-This project is a front-end REACT application using the following API: [BackEnd Project](https://github.com/Al-B-code/backend_chatroom). In your browser you are able to log in, view all chatrooms send and react to messages as well as other features.s
+This project is a front-end REACT application using the following API: [BackEnd Project](https://github.com/Al-B-code/backend_chatroom). In your browser you are able to log in, view all chatrooms, send and react to messages, as well as other features.
 
 ### AIM: 
 :dart:
@@ -50,7 +50,7 @@ messageForm
 
 ## Structure
 Built using:
-- JvaScript
+- JavaScript
 - CSS
 - BackEnd API
 - Material UI
