@@ -2,7 +2,8 @@
 
 This project is a front-end REACT application using the following API: [BackEnd Project](https://github.com/Al-B-code/backend_chatroom). In your browser you are able to log in, view all chatrooms send and react to messages as well as other features.s
 
-### :dart: AIM:
+### AIM: 
+:dart:
 To provide a chatroom application which connects users to eachother through messaging and reaction functionalities.
 
 ## Contents
@@ -16,7 +17,7 @@ To provide a chatroom application which connects users to eachother through mess
 Clone the above fullstack repository:
 ```git@github.com:joecarpentieri/chatroom_group1.git```
 
-In the terminal, you can run:
+In the terminal, you can run the following to install the necessary packages:
 ### ```npm i```
 ### ```npm install @mui/material @emotion/react @emotion/styled```
 ### ```npm i react-router-dom```
@@ -55,8 +56,8 @@ Built using:
 - Material UI
 
 Wireframe and Component Diagram:
-![wireframe](/images/wireframe.jpg)
-![component](/images/component.jpg)
+![wireframe](wireframe.jpg)
+![component](component.jpg)
 
 ## Features
 1. Log in and sign up page- only existing users can log in
