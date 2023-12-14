@@ -104,16 +104,23 @@ body {
 }
 /* Animations */
 @keyframes float {
-    from, to {
-        transform: translate(0,3%);
-    }
-    25% {
-        transform: translate(-3%,0);
-    }
-    50% {
-        transform: translate(0,-3%);
-    }
-    75% {
-        transform: translate(3%,0);
-    }
+	from, to {
+		transform: translate(0,3%);
+	}
+	25% {
+		transform: translate(-3%,0);
+	}
+	50% {
+		transform: translate(0,-3%);
+	}
+	75% {
+		transform: translate(3%,0);
+	}
 }
+h1 {
+
+	font-family: 'Bubblegum Sans';
+	font-size: 30px;
+	color: rgb(5, 79, 143);
+}
+
