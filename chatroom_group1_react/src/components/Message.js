@@ -10,9 +10,7 @@ const Message = ({message, fetchListOfChatrooms, currentUser}) => {
         message.reactions
     )
 
-    const [updatedMessage, setUpdatedMessage] = useState(message)
-
-    const reactionOptionsList = ["😄", "😂", "☹️", "😍", "✅"]
+    const reactionOptionsList = ["😄", "😂", "☹️", "😍", "✅", "🎸"]
 
     const reactionOptions = reactionOptionsList.map(reaction => {
         return <option key={reactionOptionsList.indexOf(reaction)} value={reaction}>{reaction}</option>
@@ -67,7 +65,7 @@ const Message = ({message, fetchListOfChatrooms, currentUser}) => {
     return ( 
         <>
         <div  id="message" className={isCurrentUser ? "user" : "notUser"}>
-        <p>{message.userName}: {message.content}</p>
+        <p>{message.userName}: {message.content} </p>
         <p>{listOfReactions}</p>
         <p>[sent:{formattedDate}]</p>
         
@@ -78,6 +76,7 @@ const Message = ({message, fetchListOfChatrooms, currentUser}) => {
             name="reaction"
             defaultValue="select-reaction"
             onChange={handleChange}
+            className='text-box'
             ><option disabled value="select-reaction"></option>{reactionOptions}</select>
             <input type="submit" value="addReact" className="button-old"/>
         </form>

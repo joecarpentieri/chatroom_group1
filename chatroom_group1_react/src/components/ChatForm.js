@@ -28,7 +28,7 @@ const ChatForm = ({postChatroom}) => {
     return (  
         <>
         <form id="chatroomForm" onSubmit={handleFormSubmit}>
-            <h3>Add a Chatroom</h3>
+            <h2>Add a Chatroom</h2>
             <label htmlFor='chatroom-name' >Chatroom name:</label>
             <input 
             id='chatroom-name'
