@@ -30,17 +30,17 @@ public class DataLoader implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
 
 
-        User ryan = new User("ryanAir", "Ryan@BNTA.com", Role.ADMIN);
-        userService.addUser(ryan);
+        User joe = new User("Joe", "Joe@BNTA.com", Role.ADMIN);
+        userService.addUser(joe);
 
-        User albert = new User("al-b", "Alb@BNTA.com", Role.ADMIN);
-        userService.addUser(albert);
+        User aanis = new User("Aanis", "Aanis@BNTA.com", Role.ADMIN);
+        userService.addUser(aanis);
 
-        User arianna = new User("beans", "ari@BNTA.com", Role.ADMIN);
-        userService.addUser(arianna);
+        User rosie = new User("Rosie", "Rosie@BNTA.com", Role.ADMIN);
+        userService.addUser(rosie);
 
-        User emily = new User("m&m", "emily@BNTA.com", Role.ADMIN);
-        userService.addUser(emily);
+        User gisele = new User("Gisele", "Gisele@BNTA.com", Role.ADMIN);
+        userService.addUser(gisele);
 
 
         Chatroom chatroom = new Chatroom("BNTA Chatroom");
@@ -49,27 +49,27 @@ public class DataLoader implements ApplicationRunner {
         Chatroom trainerChatroom = new Chatroom("BNTA Trainer Chatroom");
         chatroomService.addChatroom(trainerChatroom);
 
-        UserChatroomAssociation userChatroomAssociation = new UserChatroomAssociation(ryan, trainerChatroom);
+        UserChatroomAssociation userChatroomAssociation = new UserChatroomAssociation(joe, trainerChatroom);
         userChatroomAssociationRepository.save(userChatroomAssociation);
 
-        UserChatroomAssociation userChatroomAssociation1 = new UserChatroomAssociation(albert, trainerChatroom);
+        UserChatroomAssociation userChatroomAssociation1 = new UserChatroomAssociation(aanis, trainerChatroom);
         userChatroomAssociationRepository.save(userChatroomAssociation1);
 
-        UserChatroomAssociation userChatroomAssociation2 = new UserChatroomAssociation(arianna, trainerChatroom);
+        UserChatroomAssociation userChatroomAssociation2 = new UserChatroomAssociation(rosie, trainerChatroom);
         userChatroomAssociationRepository.save(userChatroomAssociation2);
 
-        UserChatroomAssociation userChatroomAssociation3 = new UserChatroomAssociation(emily, trainerChatroom);
+        UserChatroomAssociation userChatroomAssociation3 = new UserChatroomAssociation(gisele, trainerChatroom);
         userChatroomAssociationRepository.save(userChatroomAssociation3);
 
 
-        Message message = new Message("Hello world!", trainerChatroom, ryan);
+        Message message = new Message("Hello world!", trainerChatroom, joe);
         messageService.addMessage(message);
 
-        Message message1 = new Message("Hello TrainerChatroom!", trainerChatroom, albert);
+        Message message1 = new Message("Hello TrainerChatroom!", trainerChatroom, aanis);
         messageService.addMessage(message1);
-        Message message2 = new Message("Hey!", trainerChatroom, arianna);
+        Message message2 = new Message("Hey!", trainerChatroom, rosie);
         messageService.addMessage(message2);
-        Message message3 = new Message("Hi!", trainerChatroom, emily);
+        Message message3 = new Message("Hi!", trainerChatroom, gisele);
         messageService.addMessage(message3);
 
 

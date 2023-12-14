@@ -71,7 +71,7 @@ const Message = ({message, fetchListOfChatrooms, currentUser}) => {
         <p>{listOfReactions}</p>
         <p>[sent:{formattedDate}]</p>
         
-        <form id="reaction-form" onSubmit={handleFormSubmit}>
+        <form  id={isCurrentUser ? "reaction-form" : "non-reaction"} onSubmit={handleFormSubmit}>
             <label htmlFor="reaction"></label>
             <select
             id="reaction"

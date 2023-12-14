@@ -10,8 +10,6 @@
   flex-wrap: wrap;
 }
 
-
-
 body {
   background-size: cover;
   background-repeat: no-repeat;
@@ -41,6 +39,7 @@ body {
   flex-direction: column;
   width: 90%;
 }
+
 .button-old{
   background-color: #B1FE70;
   color: #3C1642;
@@ -89,34 +88,57 @@ body {
   display: flex;
   padding-right: 30px;
   position: relative;
-  margin: 10px 0;
+  margin: 10px;
   width: 50%;
-  color: #3C1642;
-  background-color: #000000;
+  color: #ffffff;
+  background-color: #00754a;
   padding: 10px;
-  align-self: flex-start;
+  align-self: flex-end;
+  border-radius: 25px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .notUser{
   color: #ffffff;
-  background-color: #4d2929;
-  align-self: flex-end;
-  /* justify-content: flex-start; */
+  background-color: #194590;
+  align-self: flex-start;
   padding-left: 0px;
   padding-right: 0px;
   padding: 10px;
-  /* width: 50%; */
   align-self: right;
   width: 50%;
+  border-radius: 25px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #message-form{
   position: absolute;
-  bottom: 10px;
+  bottom: 1px;
   width: 50%;
   position: fixed;
   left: 50%;
-  bottom: 20px;
+  /* bottom: 20px; */
   transform: translate(-50%, -50%);
   margin: 0 auto;
+}
+
+#reaction-form{
+  bottom: 10px;
+  position: relative;
+  visibility: hidden;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0c2224;
+}
+
+a:active {
+  text-decoration: #0c2224;
 }
