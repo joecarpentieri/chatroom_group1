@@ -9,13 +9,12 @@
   display: flex;
   flex-wrap: wrap;
 }
-
 body {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("Images/phot.png");
   width: 100vw;
-  height: 100vh; 
+  height: 100vh;
   margin: 0;
   padding: 0;
   position: relative;
@@ -38,10 +37,14 @@ body {
   display: flex;
   flex-direction: column;
   width: 90%;
+  margin: 20px;
+  background-color: rgba(194, 248, 248, 0.5); /* Baby blue with 80% opacity */
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
-
 .button-old{
-  background-color: #B1FE70;
+  background-color: #C6F69F;
   color: #3C1642;
   border-radius: 5px;
   border-color: #B1FE70;
@@ -50,7 +53,7 @@ body {
 }
 #message-text{
   background-color: #B2FF9E;
-  color: #163e42;
+  color: #163E42;
   border-radius: 15px;
   border-color: #B2FF9E;
 }
@@ -63,15 +66,12 @@ body {
 #message{
   margin: 25px;
  }
-
-
 #log-in-button{
   background-color: #B1FE70;
   color: #3C1642;
   border-radius: 5px;
   border-color: #B1FE70;
   margin-top: 25%;
-
 }
 .bubbles-names{
   display: inline-block;
@@ -83,23 +83,21 @@ body {
   border-radius: 10px;
   border-color: #B1FE70;
 }
-
 .user{
   display: flex;
   padding-right: 30px;
   position: relative;
   margin: 10px;
   width: 50%;
-  color: #ffffff;
-  background-color: #00754a;
+  color: #FFFFFF;
+  background-color: #00754A;
   padding: 10px;
   align-self: flex-end;
   border-radius: 25px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 .notUser{
-  color: #ffffff;
+  color: #FFFFFF;
   background-color: #194590;
   align-self: flex-start;
   padding-left: 0px;
@@ -110,7 +108,6 @@ body {
   border-radius: 25px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 #message-form{
   position: absolute;
   bottom: 1px;
@@ -121,7 +118,6 @@ body {
   transform: translate(-50%, -50%);
   margin: 0 auto;
 }
-
 #reaction-form{
   bottom: 10px;
   position: relative;
@@ -130,15 +126,12 @@ body {
 a:link {
   text-decoration: none;
 }
-
 a:visited {
   text-decoration: none;
 }
-
 a:hover {
-  color: #0c2224;
+  color: #0C2224;
 }
-
 a:active {
-  text-decoration: #0c2224;
+  text-decoration: #0C2224;
 }
