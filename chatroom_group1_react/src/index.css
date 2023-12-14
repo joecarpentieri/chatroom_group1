@@ -26,7 +26,8 @@ body {
 	background-image:
 		radial-gradient(8% 8% at 28% 22%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%);
 	box-shadow:
-		
+    0 -0.06em 0.1em hsl(0,90%,100%) inset,
+    0.05em 0 0.1em hsl(0,90%,100%) inset,
 		0 0.1em 0.4em hsl(235, 90%, 60%) inset;
 	cursor: pointer;
 	position: relative;
