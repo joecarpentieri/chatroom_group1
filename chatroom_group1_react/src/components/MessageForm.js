@@ -40,13 +40,13 @@ const [stateMessage, setStateMessage] = useState(
     return ( 
 
         <form id = "message-form" onSubmit={handleFormSubmit}>
-            <label htmlFor='user'> Select User: </label>
-            <select id = "user" name="userId" defaultValue="select-user" onChange={handleChange}>
+            <label htmlFor='user'></label>
+            <select id = "user" name="userId" defaultValue="select-user" onChange={handleChange} className='text-box'>
                     <option disabled value= "select-user">Choose a user</option>
                     {mappedUsers}
             </select>
 
-            <label htmlFor='message-text'>Message:</label>
+            <label htmlFor='message-text'> </label>
             <input
             id ="message-text"
             name='content'
