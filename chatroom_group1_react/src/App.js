@@ -44,8 +44,7 @@ function App() {
   const fetchAllUsers = async ()  => {
     const response = await fetch ("http://localhost:8080/users")
     const data = await response.json();
-    setListOfUsers(data)
-    console.log(data)   
+    setListOfUsers(data)  
 }
 
 useEffect(() => {

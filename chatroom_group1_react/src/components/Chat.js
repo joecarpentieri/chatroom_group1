@@ -12,7 +12,6 @@ const Chat = ({chatroom, fetchListOfChatrooms, currentUser}) => {
     const handleClose = () => setOpen(false)
 
     const listOfUserAssociations = chatroom.userChatroomAssociations;
-    // console.log(listOfUserAssociations);
 
     const [listOfMessages, setListOfMessages] = useState([]); 
     

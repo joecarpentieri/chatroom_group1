@@ -5,7 +5,7 @@ import AssignUserForm from '../components/AssignUserForm';
 import Navigation from '../components/Navigation';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-
+ç
 const ChatContainer = ({listOfUsers, currentUser}) => {
 
     const [listOfChatrooms, setListOfChatrooms] = useState([])
@@ -15,7 +15,6 @@ const ChatContainer = ({listOfUsers, currentUser}) => {
         const data = await response.json();
 
         setListOfChatrooms(data);
-        console.log(data);
     }
 
     const postChatroom = async (newChatroom) => {
@@ -36,7 +35,6 @@ const ChatContainer = ({listOfUsers, currentUser}) => {
         })
         const assignUser = await response.json()
         await fetchListOfChatrooms();
-        console.log(assignUser) 
     } 
 
 
