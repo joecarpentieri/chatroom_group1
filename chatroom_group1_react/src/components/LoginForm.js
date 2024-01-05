@@ -22,7 +22,7 @@ const LoginForm = ({setStateUserName,stateUserName, handleFormSubmit }) => {
         className='text-box'/>
         <input 
         type='submit' 
-        value= "login"  
+        value= "Login"  
         id = "login-button" 
         className='button-old'/>            
         </form>

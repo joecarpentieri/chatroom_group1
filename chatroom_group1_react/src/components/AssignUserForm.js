@@ -60,7 +60,7 @@ const handleChange = (event) => {
 
                 <input 
                 type="submit" 
-                value= "add user to Chatroom" 
+                value= "Add user to Chatroom" 
                 id = "add-button" 
                 className="button-old"/>
                 </form>

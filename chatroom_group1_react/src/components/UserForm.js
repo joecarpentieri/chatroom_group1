@@ -58,7 +58,7 @@ const UserForm= ({postUser}) => {
            
             <input 
             type='submit' 
-            value= "sign up"  
+            value= "Sign up"  
             id = "send-button" 
             className='button-old'/>             
         </form>
