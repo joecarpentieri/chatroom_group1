@@ -27,9 +27,9 @@ public enum Reaction {
                 return  HEARTEYES;
             case "✅":
                 return  TICK;
-            // handle other cases if needed
             case "🎸":
                 return ROCKSTAR;
+            // handle other cases if needed
             default:
                 throw new IllegalArgumentException("Invalid Reaction value: " + emoji);
         }

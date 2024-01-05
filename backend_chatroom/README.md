@@ -1,3 +1,5 @@
+THIS BACKEND_CHATROOM API IS A FORK OF ANOTHER GROUP'S REPO, ALONG WITH THIS README DOCUMENT. MINOR CHANGES CAN BE SEEN AT THE BOTTOM OF THE DOCUMENT UNDER 'CHANGES MADE:'.
+
 # **Group 1: Backend for a Chatroom**
 
 ## 👥🎸 The Chatter Beans Developer Team 🎸👥
@@ -98,3 +100,12 @@ As we progressed into coding and following guidance of the trainers, we changed 
 |           PATCH            | /messages/{messageId}          | Allow users to react to a message  
 |           DELETE            | /users/{Id}         | Delete a user by id                    |
 |           DELETE            | /chatroom/{Id}         | Delete a chatroom by id                    |
+
+CHANGES MADE:
+
+- In 'Role' Java class, added in 'NULL' enum with the value 0.
+- In 'Role' Java class, added in 'case 0: return NULL;' into fromInteger function. This fixes issue with database showing wrong numbers corresponding to wrong roles, as database showed 2 in role column when the enum value was 3 for example.
+- Added in 'SpringGlobalConfig' Java Class that implements 'WebMvcConfigurer', has a 'Configuration' annotation, imports 'CorsRegistry' and has an 'addCorsMapping' function.
+- Changed data in dataloader.
+- In 'Reaction' Java class, added in 'ROCKSTAR' enum, with the corresponding emoji being '🎸'.
+- In 'Reaction' Java class, added into 'fromString' function 'case "🎸": return ROCKSTAR'. Also moved 'handle other cases if needed' comment to under 'return ROCKSTAR'.
