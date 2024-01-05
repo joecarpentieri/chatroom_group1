@@ -20,7 +20,11 @@ const LoginForm = ({setStateUserName,stateUserName, handleFormSubmit }) => {
         onChange={handleChange}
         value={stateUserName}
         className='text-box'/>
-        <input type='submit' value= "login"  id = "login-button" className='button-old'/>            
+        <input 
+        type='submit' 
+        value= "login"  
+        id = "login-button" 
+        className='button-old'/>            
         </form>
     );
 
