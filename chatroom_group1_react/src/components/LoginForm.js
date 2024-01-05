@@ -16,7 +16,7 @@ const LoginForm = ({setStateUserName,stateUserName, handleFormSubmit }) => {
         id= "user"
         name= "userName"
         type="text"
-        placeholder="Type username ..."
+        placeholder="Enter username"
         onChange={handleChange}
         value={stateUserName}
         className='text-box'/>
