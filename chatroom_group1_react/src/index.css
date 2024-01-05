@@ -123,4 +123,8 @@ h1 {
 	font-size: 30px;
 	color: rgb(5, 79, 143);
 }
+#chatroom_name{
+    color: white;
+    text-align: center;
+}
 
