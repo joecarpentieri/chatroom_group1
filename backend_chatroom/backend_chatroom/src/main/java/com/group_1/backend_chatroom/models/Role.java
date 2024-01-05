@@ -2,6 +2,7 @@ package com.group_1.backend_chatroom.models;
 
 public enum Role {
 
+    NULL(0),
     USER(1),
     MODERATOR(2),
     ADMIN(3);
@@ -14,6 +15,8 @@ public enum Role {
 
     public static Role fromInteger(int value) {
         switch (value) {
+            case 0:
+                return NULL;
             case 1:
                 return USER;
             case 2:
