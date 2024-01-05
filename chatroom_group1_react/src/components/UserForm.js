@@ -41,7 +41,7 @@ const UserForm= ({postUser}) => {
             id= "user-name"
             name= "userName"
             type="text"
-            placeholder="Type username"
+            placeholder="Enter username"
             onChange={handleChange}
             value={stateUser.userName}
             className='text-box'/>
@@ -51,14 +51,14 @@ const UserForm= ({postUser}) => {
             id= "user-email"
             name= "email"
             type="email"
-            placeholder="Type email"
+            placeholder="Enter email"
             onChange={handleChange}
             value={stateUser.email}
             className='text-box'/>
            
             <input 
             type='submit' 
-            value= "sign up"  
+            value= "Sign up"  
             id = "send-button" 
             className='button-old'/>             
         </form>

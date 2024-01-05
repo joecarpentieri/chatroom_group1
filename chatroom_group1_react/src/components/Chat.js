@@ -11,8 +11,6 @@ const Chat = ({chatroom, fetchListOfChatrooms, currentUser}) => {
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
 
-    const listOfUserAssociations = chatroom.userChatroomAssociations;
-
     const [listOfMessages, setListOfMessages] = useState([]); 
     
     useEffect(() => {
@@ -46,8 +44,9 @@ const Chat = ({chatroom, fetchListOfChatrooms, currentUser}) => {
              >
                 <Box id="modal-box">
                 <Button onClick={handleClose}>X</Button>
+                <p id='chatroom_name'>{chatroom.name}</p>
                 <MessageList listOfMessages={listOfMessages} fetchListOfChatrooms={fetchListOfChatrooms} currentUser={currentUser}/> 
-                <MessageForm postMessage= {postMessage} chatroomId = {chatroom.id} listOfUserAssociations={listOfUserAssociations} currentUser={currentUser}/>
+                <MessageForm postMessage= {postMessage} chatroomId = {chatroom.id} listOfUserAssociations={chatroom.userChatroomAssociations} currentUser={currentUser}/>
                 </Box>
                </Modal>
                </article>
