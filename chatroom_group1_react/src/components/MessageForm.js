@@ -33,6 +33,7 @@ const [stateMessage, setStateMessage] = useState(
     const handleChange = (event) => {
         let propertyName = event.target.name
         let copiedMessage =  {...stateMessage}
+        copiedMessage.userId = currentUser.id
         copiedMessage[propertyName] = event.target.value
         setStateMessage(copiedMessage)
     }
@@ -40,13 +41,6 @@ const [stateMessage, setStateMessage] = useState(
     return ( 
 
         <form id = "message-form" onSubmit={handleFormSubmit}>
-
-            <label htmlFor='user'></label>
-            <select id = "user" name="userId" defaultValue="select-user" onChange={handleChange} className='text-box'>
-                    <option disabled value= "select-user">Choose a user</option>
-                    {mappedUsers}
-            </select>
-
 
             <label htmlFor='message-text'> </label>
             <input
