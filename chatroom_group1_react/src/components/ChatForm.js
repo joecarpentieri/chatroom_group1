@@ -36,10 +36,12 @@ const ChatForm = ({postChatroom}) => {
             type='text'
             placeholder='Enter Chatroom Name'
             value={stateChatroom.name}
-            onChange={handleChange}
-            
-            />
-            <input type='submit' value="Add Chatroom!" className="button-old"/>
+            onChange={handleChange}/>
+
+            <input 
+            type='submit' 
+            value="Add Chatroom!" 
+            className="button-old"/>
         </form>
 
         </div>

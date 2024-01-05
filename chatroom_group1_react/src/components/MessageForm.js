@@ -55,10 +55,13 @@ const [stateMessage, setStateMessage] = useState(
             type='text'
             placeholder='type a message...'
             onChange={handleChange}
-            value={stateMessage.content}
-            />
+            value={stateMessage.content}/>
 
-            <input type='submit' value= "send"  id = "send-button" className='button-old'/>
+            <input 
+            type='submit' 
+            value= "send"  
+            id = "send-button" 
+            className='button-old'/>
         </form>
 
      

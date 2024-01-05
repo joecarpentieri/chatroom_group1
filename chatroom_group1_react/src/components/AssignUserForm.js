@@ -58,7 +58,11 @@ const handleChange = (event) => {
                     {mappedUsers}
                 </select>
 
-                <input type="submit" value= "add user to Chatroom" id = "add-button" className="button-old" />
+                <input 
+                type="submit" 
+                value= "add user to Chatroom" 
+                id = "add-button" 
+                className="button-old"/>
                 </form>
             
             </div>

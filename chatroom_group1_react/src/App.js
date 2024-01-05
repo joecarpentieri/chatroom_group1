@@ -1,6 +1,6 @@
 import './App.css';
 import ChatContainer from './containers/ChatContainer';
-import { Box, Modal, Button } from '@mui/material';
+import { Box, Modal } from '@mui/material';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import UserForm from './components/UserForm';
@@ -44,8 +44,7 @@ function App() {
   const fetchAllUsers = async ()  => {
     const response = await fetch ("http://localhost:8080/users")
     const data = await response.json();
-    setListOfUsers(data)
-    console.log(data)   
+    setListOfUsers(data)  
 }
 
 useEffect(() => {

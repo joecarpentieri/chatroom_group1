@@ -55,7 +55,12 @@ const UserForm= ({postUser}) => {
             onChange={handleChange}
             value={stateUser.email}
             className='text-box'/>
-        <input type='submit' value= "sign up"  id = "send-button" className='button-old'/>             
+           
+            <input 
+            type='submit' 
+            value= "sign up"  
+            id = "send-button" 
+            className='button-old'/>             
         </form>
      );
 }
