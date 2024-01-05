@@ -19,8 +19,10 @@ Clone the above fullstack repository:
 
 In the terminal, you can run the following to install the necessary packages:
 ### ```npm i```
-### ```npm install @mui/material @emotion/react @emotion/styled```
-### ```npm i react-router-dom```
+This will install the additional libraries:
+- Material UI
+- React Router DOM
+
 ### ```npm start```
 
 Runs the app.
