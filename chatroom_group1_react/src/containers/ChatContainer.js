@@ -5,7 +5,6 @@ import AssignUserForm from '../components/AssignUserForm';
 import Navigation from '../components/Navigation';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-ç
 const ChatContainer = ({listOfUsers, currentUser}) => {
 
     const [listOfChatrooms, setListOfChatrooms] = useState([])
