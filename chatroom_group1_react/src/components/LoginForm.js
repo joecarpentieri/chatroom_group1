@@ -1,9 +1,5 @@
-import React, { useState, useEffect } from 'react';
 
 const LoginForm = ({setStateUserName,stateUserName, handleFormSubmit }) => {
-
-   
-
 
     const handleChange = (event) => {
         let copiedUserName = {...stateUserName}

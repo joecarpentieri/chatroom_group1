@@ -1,6 +1,6 @@
 import './App.css';
 import ChatContainer from './containers/ChatContainer';
-import { Box, Modal, Button } from '@mui/material';
+import { Box, Modal } from '@mui/material';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import UserForm from './components/UserForm';
