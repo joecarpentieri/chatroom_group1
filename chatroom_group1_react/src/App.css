@@ -34,6 +34,29 @@ body {
   justify-content: center;
   align-items: center;
 }
+#error-message {
+
+  
+  text-align: center;
+  height: 20%;
+  width: 30%;
+  background-color: white;
+  color: black;
+  /* margin-top: ; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 25px;
+  position: relative; left: 35%; top: 40%;
+  border-radius: 25%;
+
+
+
+
+
+}
 .message {
   display: flex;
   flex-direction: column;

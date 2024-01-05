@@ -13,7 +13,12 @@ function App() {
   const [listOfUsers, setListOfUsers] = useState([])
   const [currentUser, setCurrentUser] = useState(null)
   const[stateUserName, setStateUserName]= useState("")
+  const[errorMessage, setErrorMessage] = useState("")
+  const[isErrorMessageOpen, setIsErrorMessageOpen]= useState(false);
 
+
+  const handleErrorMessageOpen = () => setIsErrorMessageOpen(true);
+  const handleErrorMessageClose= () => setIsErrorMessageOpen(false);
 
   const handleFormSubmit = (event) => {
 
@@ -25,7 +30,8 @@ function App() {
           setCurrentUser(userFound);
           setStateUserName("")
           } else {
-          alert("Invalid user, you are not a ROCKSTAR🎸🎸!!!!!")
+          setErrorMessage("Invalid user, you are not a ROCKSTAR");
+          handleErrorMessageOpen();
       }
 
   }
@@ -61,12 +67,23 @@ useEffect(() => {
      </div> 
       <button className='button-old' onClick={handleOpen}>Log Out</button>
       < ChatContainer listOfUsers={listOfUsers} currentUser={currentUser}/>
+
+      <Modal
+      open = {isErrorMessageOpen}
+      onClose={handleErrorMessageClose}
+      >
+        <Box id = "error-message">
+      <p>{errorMessage}</p>
+      <button onClick={handleErrorMessageClose}>ok</button>
+        </Box>
+      </Modal>
       
       < Modal 
         open= {open}
         onClose={handleClose}>
           
           <Box id="log-in-modal">
+
             <UserForm postUser = {postUser}/>
             <LoginForm  setStateUserName={setStateUserName} stateUserName={stateUserName} handleFormSubmit = {handleFormSubmit}/>
           </Box>
